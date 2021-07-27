@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>Battery management system</title>
+<link rel="stylesheet" href="shreyu.css">
+</head>
+<body>
+<div class="banner">
+<div class="navbar">
+<img scr="logo.png" 
+</div>
+</body>
+</html>
