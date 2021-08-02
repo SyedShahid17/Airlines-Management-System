@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@page import="java.sql.*,java.util.*"%>
-<table>
-<%
+	<%@page import="java.sql.*,java.util.*"%>
+	<table>
+		<%
 String user=request.getParameter("user") ;
 String Pass=request.getParameter("newpass");
 
@@ -29,6 +29,6 @@ catch(Exception e){
         out.println("</script>");
     }
 %>
-</table>
+	</table>
 </body>
 </html>

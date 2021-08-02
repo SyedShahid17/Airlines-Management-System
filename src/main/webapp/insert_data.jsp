@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body align="center" bgcolor="olive">
-<h2>Accounts Details Submitted Successfully!!</h2>
-<%@page import="java.sql.*,java.util.*"%>
-<table align="center">
-<%
+	<h2>Accounts Details Submitted Successfully!!</h2>
+	<%@page import="java.sql.*,java.util.*"%>
+	<table align="center">
+		<%
 String UserName=request.getParameter("username");
 String FName=request.getParameter("fname");
 String LName=request.getParameter("lname");
@@ -26,17 +26,35 @@ try{
     System.out.println("Data is successfully inserted into database.");
     ResultSet rs=st.executeQuery("Select * from Registered_accounts");
     if(rs.last()){
-    	%>   
-    	    
-            <tr><td>User Name</td><td><%=rs.getString("User_Id")%></td></tr>
-            <tr><td>First Name</td><td><%=rs.getString("FirstName")%></td></tr>
-            <tr><td>Last Name</td><td><%=rs.getString("LastName")%></td></tr>
-            <tr><td>Email</td><td><%=rs.getString("Email")%>"></td></tr>
-            <tr><td>Contact No</td><td><%=rs.getString("ContactNo")%></td></tr>
-            <tr><td>Password</td><td><%=rs.getString("Password")%></td></tr>
-            
-             
-        <%
+    	%>
+
+		<tr>
+			<td>User Name</td>
+			<td><%=rs.getString("User_Id")%></td>
+		</tr>
+		<tr>
+			<td>First Name</td>
+			<td><%=rs.getString("FirstName")%></td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td><%=rs.getString("LastName")%></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><%=rs.getString("Email")%>"></td>
+		</tr>
+		<tr>
+			<td>Contact No</td>
+			<td><%=rs.getString("ContactNo")%></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><%=rs.getString("Password")%></td>
+		</tr>
+
+
+		<%
     }
     con.close();
 }
@@ -50,8 +68,8 @@ finally{
     out.println("</script>");
 }
         %>
-        
-        
-</table>
+
+
+	</table>
 </body>
 </html>
